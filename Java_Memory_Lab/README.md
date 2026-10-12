@@ -59,6 +59,47 @@ Stack memory stores method execution frames and local variables, while Heap memo
     salary reference
     bonus = 5000
 
+    Enter salary: 30000
+    Enter bonus: 5000
+    
+    Employee Object Created
+    Employee Identity Hash Code: 12345678
+    
+    Inside display() Method:
+    Salary (Instance Variable): 30000
+    Bonus (Local Variable): 5000
+    
+    Report Object Created
+    Report Identity Hash Code: 87654321
+    Report: Employee salary is 30000
+
+   
+    Employee employee = new Employee(salary);
+        │                  │
+        │                  └── Employee object → Heap
+        │
+        └── reference → Stack
+
+Memory Concept:
+Employee object -> Heap
+Report object -> Heap
+salary -> Instance field
+bonus -> Local variable/value in display()
+show() -> Executes in its own method frame
+
+    Heap
+    ┌────────────────────┐
+    │ Employee Object    │
+    │                    │
+    │ salary = 30000     │
+    └────────────────────┘
+
+    Heap
+    ┌────────────────────┐
+    │ Employee Object    │
+    │                    │
+    │ salary = 30000     │
+    └────────────────────┘
 
   Report Object
     
