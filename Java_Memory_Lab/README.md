@@ -34,6 +34,10 @@ Stack memory stores method execution frames and local variables, while Heap memo
     - marks → display() method-এর Stack frame এ থাকে
 
   
+--------------------------------------------------------------------------------------------------------- 
+  
+  
+  
   # Problem 2: Stack Frames, Heap Objects, and Inner Classes
  
    ### Memory Explanation
@@ -101,6 +105,11 @@ show() -> Executes in its own method frame
     │ salary = 30000     │
     └────────────────────┘
 
+    salary → instance variable → Employee object-এর সাথে Heap
+    bonus → local value → display() execution-এর সাথে Stack frame
+    report → reference Stack-এ, কিন্তু new Report() object Heap-এ
+
+
   Report Object
     
     Report report = new Report();
@@ -110,6 +119,13 @@ show() -> Executes in its own method frame
     Report Object
 
 
+
+  
+  
+  
+  
+  
+  
   ## Stack and Heap Memory Concept
 
 ### Heap Memory
@@ -140,6 +156,8 @@ void display(){
 marks -> Stack
 
 
+
+
 ### Identity Hash Code
 
     System.identityHashCode(object)
@@ -148,10 +166,18 @@ marks -> Stack
     
     It is not the actual memory address.
 
+
+
+
+
 ### Q: Why is Heap Memory mainly used in Java?
 
     Answer: Heap memory is mainly used for dynamic memory allocation of objects and their instance data. It allows objects to remain available beyond the method that created them, as long as they are reachable. The JVM manages heap memory and reclaims memory occupied by eligible objects through garbage collection.
     মনে রাখবে: Stack = method execution, Heap = objects and instance data। এটা Java memory management বোঝার সবচেয়ে সহজ conceptual rule.
+
+
+
+
 
 ### Q. Why is Heap important?
     
